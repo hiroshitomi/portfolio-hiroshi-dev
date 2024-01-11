@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCES = [
+    {
+        date: "Enero 2022 - Actualidad",
+        title: "Frontend Developer BioSoft Online S.R.L",
+        description: "Desarrollando el frontend sobre sistemas de autorización en línea para Bioquímicos en Argentina.",
+        link: ""
+    },
+    {
+        date: "Octubre 2022 - Actualidad",
+        title: "Developer TeteClothes",
+        description: "Desarrollando la tienda online completa de un emprendimiento propio, utilizando React.",
+        link: ""
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">                  
+    {
+        EXPERIENCES.map(experience => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {... experience} />
+        </li>
+        ))
+    }
+</ol>
+

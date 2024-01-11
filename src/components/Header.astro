@@ -1,0 +1,23 @@
+---
+import "../styles.css"
+---
+
+<header id="header" class="flex fixed justify-between py-3 items-center w-full xl:w-[1120px] mx-auto z-[99999]">
+    <img class="rounded-full size-12 ml-4" 
+         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYSef5Z6e4QhOChOQMKJW8Kem185gcB6yKDDRCPdI_miE0hxt7-i8NTavk1IsNVg_nxNo&usqp=CAU" alt="Hiroshi Adauto">
+    
+    <button data-collapse-toggle="navbar-hiro" 
+    type="button" 
+    class="items-center p-2 w-10 h-10 justify-center text-sm md:hidden hover:scale-110 transition" aria-controls="navbar-hiro" aria-expanded="false">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <nav id="navbar-hiro" class="hidden md:flex flex-row gap-x-10 opacity-80 mr-4 xl:mr-0">
+        <a href="#top">Inicio</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>

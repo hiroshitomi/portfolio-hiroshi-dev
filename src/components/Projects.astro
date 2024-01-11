@@ -1,0 +1,75 @@
+---
+import HtmlIcon from "../components/icons/html.astro";
+import Css3Icon from "../components/icons/Css3.astro";
+import JsIcon from "../components/icons/Js.astro";
+import ReactIcon from "../components/icons/React.astro";
+import TailwindIcon from "../components/icons/Tailwind.astro";
+
+const TAGS = {
+    HTML: {
+        name: "HTML5",
+        class: "bg-orange-200 text-white",
+        icon: HtmlIcon
+    },
+    CSS: {
+        name: "CSS3",
+        class: "bg-blue-200 text-white",
+        icon: Css3Icon
+    },
+    JS: {
+        name: "JavaScript",
+        class: "bg-yellow-200 text-black",
+        icon: JsIcon
+    },
+    REACT: {
+        name: "React",
+        class: "bg-blue-200 text-white",
+        icon: ReactIcon
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-white text-[#73bcf6]",
+        icon: TailwindIcon
+    }
+}
+
+const PROJECTS = [
+    {
+        title: "Sitio Web para la Escuela Miyazato de Karate Do",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam beatae eos animi corrupti similique itaque, sed totam possimus alias architecto quas. Natus, reprehenderit! Voluptatum porro itaque nesciunt, aliquid debitis maiores!",
+        link: "https://hiroshitomi.github.io/karate-do-miyazato/",
+        github: "https://hiroshitomi.github.io/karate-do-miyazato/",
+        image: "/websitedojo.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JS]
+    },
+    {
+        title: "Landing page de TESLA - clon",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam beatae eos animi corrupti similique itaque, sed totam possimus alias architecto quas. Natus, reprehenderit! Voluptatum porro itaque nesciunt, aliquid debitis maiores!",
+        link: "https://tesla-landing-teal.vercel.app/",
+        github: "https://github.com/hiroshitomi/tesla-landing",
+        image: "/landing-tesla-clone.webp",
+        tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.JS]
+    }
+]
+---
+
+
+{
+    PROJECTS.map(({title, description, tags, image}) =>(
+        <article class="py-16">
+            <h3 class="text-2xl font-semibold text-purple-200/90 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-3 my-4">
+                {
+                    tags.map(tag => (
+                        <li class="flex items-center rounded-full text-xs gap-x-2 border border-white/20 py-2 px-3 hover:scale-110 transition hover:bg-white/25 cursor-default">
+                            <tag.icon class="size-4"/> {tag.name}
+                        </li>
+                    ))
+                }
+            </ul>
+            <img src={image} alt={`Captura de pantalla del proyecto ${title}`}
+                class="rounded shadow-2xl shadow-white/20">
+        </article>
+    ))
+}

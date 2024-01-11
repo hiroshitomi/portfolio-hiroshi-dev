@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import ExperienceWork from '../components/icons/ExperienceWork.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout 
+	title="Portfolio de HiroshiAdauto - Desarrollador y Programador Web"
+	description='Contrata a Hiroshi para crear tu aplicación web. Desarrollador Web. Especializado en crear web únicas.'>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">Hey, Soy Hiroshi 
+				<a 	class="flex items-center text-nowrap"
+					href="https://www.linkedin.com/in/hiroshidautotomioka/"
+					target="_blank"
+					rel="noopener">
+					<Badge>Disponible para trabajar</Badge> 
+				</a>
+			</h1>
+			<h2 class="text-md md:text-2xl lg:text-3xl opacity-80 text-wrap">
+				<span class="text-bold">+2 años de experiencia. </span>
+				<span class="text-purple-200/90 font-semibold">Desarrollador Web. </span>
+				<span> De Córdoba, Argentina.</span>
+				<span class="opacity-80">Especializado en crear webs únicas.</span>
+			</h2>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/hiroshidautotomioka/">
+						<LinkedInIcon class="size-4 lg:size-6"/>
+						LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/hiroshitomi">
+						<GitHubIcon class="size-4 lg:size-6"/>
+						GitHub
+				</SocialPill>
+				<SocialPill href="mailto:hiroshi.tomioka95@gmail.com">
+					<MailIcon class="size-4 lg:size-6"/>
+					hiroshi.tomioka95@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia" class="py-44 pb-32">
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<ExperienceWork class="size-8"/>
+				Experiencia laboral</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos" class="py-44 pb-32">
+			<h2 class="text-3xl font-semibold mb-6 flex items-center gap-x-3">
+				<CodeIcon class="size-8"/>
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>
+
+
